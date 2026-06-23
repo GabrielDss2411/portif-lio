@@ -35,6 +35,10 @@
   .proj-card:nth-of-type(3) { top: 84px; }
   .proj-card:nth-of-type(4) { top: 102px; }
   @keyframes detailIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  /* Cap content width so it doesn't stretch on large/ultrawide screens */
+  #main { max-width: 1440px; }
+  /* Project card media keeps a consistent ratio at any width */
+  .proj-img { aspect-ratio: 5 / 2; }
   /* Keyboard focus — visible only when navigating by keyboard */
   a:focus-visible, button:focus-visible, .proj-card:focus-visible { outline: 2px solid #7F77DD; outline-offset: 4px; border-radius: 4px; }
   /* Active nav link (set by scroll-spy) */
@@ -60,7 +64,9 @@
     #sidebar .brand { margin-top: 0 !important; }
     #main { margin-left: 0 !important; margin-top: 56px !important; }
     .about-grid { grid-template-columns: 1fr !important; }
-    .proj-img { height: 230px !important; }
+    .proj-img { aspect-ratio: 3 / 2 !important; }
+    .proj-foot { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+    .proj-foot > div:last-child { text-align: left !important; }
     .detail-section { grid-template-columns: 1fr !important; gap: 12px !important; }
   }
 </style>
@@ -125,11 +131,11 @@
         <!-- Card 1 -->
         <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#7F77DD;">
           <div style="padding:14px;">
-            <div class="proj-img" style="position:relative; height:400px; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/hemovision.png') center/cover no-repeat;">
+            <div class="proj-img" style="position:relative; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/hemovision.png') center/cover no-repeat;">
               <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD;">(01)</span>
             </div>
           </div>
-          <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
+          <div class="proj-foot" style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
             <div style="max-width:580px;">
               <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:30px; letter-spacing:-0.01em;">Hemovision</div>
               <div style="font-size:14px; color:#8a8a8a; margin-top:10px; line-height:1.55;">Agente de triagem pré-analítica de amostras de sangue com visão computacional. Parceria UniCarioca × Hospital Salgado Filho.</div>
@@ -144,11 +150,11 @@
         <!-- Card 2 -->
         <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#7F77DD;">
           <div style="padding:14px;">
-            <div class="proj-img" style="position:relative; height:400px; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/hanna.png') center/cover no-repeat;">
+            <div class="proj-img" style="position:relative; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/hanna.png') center/cover no-repeat;">
               <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD;">(02)</span>
             </div>
           </div>
-          <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
+          <div class="proj-foot" style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
             <div style="max-width:580px;">
               <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:30px; letter-spacing:-0.01em;">Hanna, AI Interviewer</div>
               <div style="font-size:14px; color:#8a8a8a; margin-top:10px; line-height:1.55;">Agente conversacional de recrutamento técnico automatizado via WhatsApp, com fluxos de entrevista orquestrados.</div>
@@ -163,11 +169,11 @@
         <!-- Card 3 -->
         <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#7F77DD;">
           <div style="padding:14px;">
-            <div class="proj-img" style="position:relative; height:400px; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/crm.png') center/cover no-repeat;">
+            <div class="proj-img" style="position:relative; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/crm.png') center/cover no-repeat;">
               <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD;">(03)</span>
             </div>
           </div>
-          <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
+          <div class="proj-foot" style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
             <div style="max-width:580px;">
               <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:30px; letter-spacing:-0.01em;">WhatsApp CRM Multi-branch</div>
               <div style="font-size:14px; color:#8a8a8a; margin-top:10px; line-height:1.55;">SaaS de gestão de atendimento multi-filial com arquitetura de filas, RLS e tempo real via WebSockets.</div>
@@ -182,11 +188,11 @@
         <!-- Card 4 -->
         <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#7F77DD;">
           <div style="padding:14px;">
-            <div class="proj-img" style="position:relative; height:400px; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/huntersos.png') center/cover no-repeat;">
+            <div class="proj-img" style="position:relative; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/huntersos.png') center/cover no-repeat;">
               <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD;">(04)</span>
             </div>
           </div>
-          <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
+          <div class="proj-foot" style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
             <div style="max-width:580px;">
               <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:30px; letter-spacing:-0.01em;">HuntersOS Report Agent</div>
               <div style="font-size:14px; color:#8a8a8a; margin-top:10px; line-height:1.55;">Orquestrador de relatórios operacionais com extração de dados via visão computacional e output JSON padronizado.</div>
