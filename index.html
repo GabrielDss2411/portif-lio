@@ -28,7 +28,7 @@
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { margin: 0; background: #0A0A0A; }
-  ::selection { background: #7F77DD; color: #0A0A0A; }
+  ::selection { background: #3B82F6; color: #0A0A0A; }
   .proj-card { position: sticky; box-shadow: 0 -26px 60px -28px rgba(0,0,0,0.95); }
   .proj-card:nth-of-type(1) { top: 48px; }
   .proj-card:nth-of-type(2) { top: 66px; }
@@ -42,10 +42,10 @@
   /* Project card media keeps a consistent ratio at any width */
   .proj-img { aspect-ratio: 5 / 2; }
   /* Keyboard focus — visible only when navigating by keyboard */
-  a:focus-visible, button:focus-visible, .proj-card:focus-visible { outline: 2px solid #7F77DD; outline-offset: 4px; border-radius: 4px; }
+  a:focus-visible, button:focus-visible, .proj-card:focus-visible { outline: 2px solid #3B82F6; outline-offset: 4px; border-radius: 4px; }
   /* Active nav link (set by scroll-spy) */
   #sidebar .navlinks a.active { color: #EDEDED !important; }
-  #sidebar .navlinks a.active > span { color: #7F77DD !important; }
+  #sidebar .navlinks a.active > span { color: #3B82F6 !important; }
   /* Hamburger — desktop hidden, shown on mobile */
   #menuToggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
   #menuToggle span { width: 22px; height: 2px; background: #EDEDED; display: block; transition: transform .25s, opacity .25s; }
@@ -81,20 +81,20 @@
   <nav id="sidebar" style="position:fixed; left:0; top:0; height:100vh; width:240px; padding:38px 34px; display:flex; flex-direction:column; border-right:1px solid #161616; background:#0A0A0A; z-index:30;">
     <div class="brand" style="display:flex; flex-direction:column; gap:2px;">
       <span style="font-family:'Space Grotesk'; font-weight:600; font-size:19px; letter-spacing:0.01em; line-height:1.1;">GABRIEL</span>
-      <span style="font-family:'Space Grotesk'; font-weight:600; font-size:19px; letter-spacing:0.01em; line-height:1.1; display:inline-flex; align-items:center; gap:8px;">SILVA<span style="width:7px; height:7px; background:#7F77DD; display:inline-block;"></span></span>
+      <span style="font-family:'Space Grotesk'; font-weight:600; font-size:19px; letter-spacing:0.01em; line-height:1.1; display:inline-flex; align-items:center; gap:8px;">SILVA<span style="width:7px; height:7px; background:#3B82F6; display:inline-block;"></span></span>
     </div>
     <button id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navlinks">
       <span></span><span></span><span></span>
     </button>
     <div class="navlinks" id="navlinks" style="margin-top:52px; display:flex; flex-direction:column; gap:16px; font-family:'JetBrains Mono',monospace; font-size:13px;">
-      <a href="#introducao" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#7F77DD;"><span style="color:#4a4a4a;">01</span> Introdução</a>
-      <a href="#projetos" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#7F77DD;"><span style="color:#4a4a4a;">02</span> Projetos</a>
-      <a href="#skills" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#7F77DD;"><span style="color:#4a4a4a;">03</span> Skills</a>
-      <a href="#sobre" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#7F77DD;"><span style="color:#4a4a4a;">04</span> Sobre</a>
-      <a href="#contato" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#7F77DD;"><span style="color:#4a4a4a;">05</span> Contato</a>
+      <a href="#introducao" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#3B82F6;"><span style="color:#4a4a4a;">01</span> Introdução</a>
+      <a href="#projetos" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#3B82F6;"><span style="color:#4a4a4a;">02</span> Projetos</a>
+      <a href="#skills" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#3B82F6;"><span style="color:#4a4a4a;">03</span> Skills</a>
+      <a href="#sobre" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#3B82F6;"><span style="color:#4a4a4a;">04</span> Sobre</a>
+      <a href="#contato" style="color:#8a8a8a; text-decoration:none; display:flex; gap:10px; transition:color .2s;" style-hover="color:#3B82F6;"><span style="color:#4a4a4a;">05</span> Contato</a>
     </div>
     <div class="navfoot" style="margin-top:auto; display:flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6a6a6a; letter-spacing:0.03em;">
-      <span style="width:7px; height:7px; border-radius:50%; background:#7F77DD; box-shadow:0 0 8px #7F77DD;"></span> Disponível para projetos
+      <span style="width:7px; height:7px; border-radius:50%; background:#3B82F6; box-shadow:0 0 8px #3B82F6;"></span> Disponível para projetos
     </div>
   </nav>
 
@@ -102,15 +102,15 @@
 
     <!-- HERO -->
     <section id="introducao" style="scroll-margin-top:40px; max-width:1000px; min-height:74vh; display:flex; flex-direction:column; justify-content:center;">
-      <div style="display:inline-flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#7F77DD; letter-spacing:0.08em; margin-bottom:36px;">
-        <span style="width:9px; height:9px; background:#7F77DD; display:inline-block;"></span> Desenvolvedor back-end
+      <div style="display:inline-flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#3B82F6; letter-spacing:0.08em; margin-bottom:36px;">
+        <span style="width:9px; height:9px; background:#3B82F6; display:inline-block;"></span> Desenvolvedor back-end
       </div>
       <h1 class="hero-h" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(44px,7.2vw,90px); line-height:1.0; letter-spacing:-0.025em; margin:0;">
-        Back-ends e automações<br>que <span style="color:#7F77DD;">rodam em<br>produção.</span>
+        Back-ends e automações<br>que <span style="color:#3B82F6;">rodam em<br>produção.</span>
       </h1>
       <p style="font-size:clamp(16px,1.7vw,19px); line-height:1.6; color:#9a9a9a; max-width:560px; margin:30px 0 0;">Sou estudante de Ciência da Computação e trabalho automatizando processos operacionais de uma empresa. Gosto de entender a operação na prática antes de programar, e já tenho alguns sistemas rodando em produção.</p>
       <div style="display:flex; align-items:center; flex-wrap:wrap; gap:26px; margin-top:46px;">
-        <a href="#projetos" style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px; color:#EDEDED; text-decoration:none; border:1px solid #7F77DD; padding:14px 30px; border-radius:999px; transition:all .2s;" style-hover="background:#7F77DD; color:#0A0A0A;">Ver projetos →</a>
+        <a href="#projetos" style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px; color:#EDEDED; text-decoration:none; border:1px solid #3B82F6; padding:14px 30px; border-radius:999px; transition:all .2s;" style-hover="background:#3B82F6; color:#0A0A0A;">Ver projetos →</a>
         <a href="https://www.linkedin.com/in/gabriel-da-silva-040214257/" target="_blank" rel="noopener noreferrer" style="font-size:14px; color:#9a9a9a; text-decoration:none; border-bottom:1px solid #333; padding-bottom:3px; transition:color .2s;" style-hover="color:#EDEDED;">Ver meu LinkedIn</a>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:54px;">
@@ -126,16 +126,16 @@
     <!-- PROJETOS -->
     <section id="projetos" style="scroll-margin-top:40px; margin-top:150px;">
       <div style="display:flex; align-items:center; gap:14px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:50px;">
-        <span style="color:#7F77DD;">02</span><span style="width:28px; height:1px; background:#2a2a2a;"></span> Projetos
+        <span style="color:#3B82F6;">02</span><span style="width:28px; height:1px; background:#2a2a2a;"></span> Projetos
       </div>
 
       <div style="display:flex; flex-direction:column; gap:28px;">
 
         <!-- Card 1 -->
-        <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#7F77DD;">
+        <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#3B82F6;">
           <div style="padding:14px;">
             <div class="proj-img" style="position:relative; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/hemovision.png') center/cover no-repeat;">
-              <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD;">(01)</span>
+              <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#3B82F6;">(01)</span>
             </div>
           </div>
           <div class="proj-foot" style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
@@ -145,16 +145,16 @@
             </div>
             <div style="text-align:right; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a; line-height:1.9; flex-shrink:0;">
               <div>FastAPI · GPT-4o Vision · Azure AI</div>
-              <div style="color:#7F77DD;">2026</div>
+              <div style="color:#3B82F6;">2026</div>
             </div>
           </div>
         </a>
 
         <!-- Card 2 -->
-        <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#7F77DD;">
+        <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#3B82F6;">
           <div style="padding:14px;">
             <div class="proj-img" style="position:relative; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/hanna.png') center/cover no-repeat;">
-              <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD;">(02)</span>
+              <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#3B82F6;">(02)</span>
             </div>
           </div>
           <div class="proj-foot" style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
@@ -164,16 +164,16 @@
             </div>
             <div style="text-align:right; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a; line-height:1.9; flex-shrink:0;">
               <div>n8n · LLM · WhatsApp</div>
-              <div style="color:#7F77DD;">2025</div>
+              <div style="color:#3B82F6;">2025</div>
             </div>
           </div>
         </a>
 
         <!-- Card 3 -->
-        <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#7F77DD;">
+        <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#3B82F6;">
           <div style="padding:14px;">
             <div class="proj-img" style="position:relative; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/crm.png') center/cover no-repeat;">
-              <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD;">(03)</span>
+              <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#3B82F6;">(03)</span>
             </div>
           </div>
           <div class="proj-foot" style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
@@ -183,16 +183,16 @@
             </div>
             <div style="text-align:right; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a; line-height:1.9; flex-shrink:0;">
               <div>Node.js · Redis · Supabase · BullMQ</div>
-              <div style="color:#7F77DD;">2025</div>
+              <div style="color:#3B82F6;">2025</div>
             </div>
           </div>
         </a>
 
         <!-- Card 4 -->
-        <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#7F77DD;">
+        <a href="#" class="proj-card" onClick="{{ openCard }}" style="cursor:pointer; display:block; text-decoration:none; color:inherit; border:1px solid #161616; border-radius:8px; overflow:hidden; background:#0c0c0c; transition:border-color .25s;" style-hover="border-color:#3B82F6;">
           <div style="padding:14px;">
             <div class="proj-img" style="position:relative; border-radius:5px; overflow:hidden; background:#0A0A0A url('images/huntersos.png') center/cover no-repeat;">
-              <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD;">(04)</span>
+              <span style="position:absolute; top:16px; left:18px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#3B82F6;">(04)</span>
             </div>
           </div>
           <div class="proj-foot" style="display:flex; justify-content:space-between; align-items:flex-end; gap:28px; padding:8px 24px 26px;">
@@ -202,7 +202,7 @@
             </div>
             <div style="text-align:right; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a; line-height:1.9; flex-shrink:0;">
               <div>n8n · Python · LLM</div>
-              <div style="color:#7F77DD;">2025</div>
+              <div style="color:#3B82F6;">2025</div>
             </div>
           </div>
         </a>
@@ -213,7 +213,7 @@
     <!-- SKILLS -->
     <section id="skills" style="scroll-margin-top:40px; margin-top:150px;">
       <div style="display:flex; align-items:center; gap:14px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:50px;">
-        <span style="color:#7F77DD;">03</span><span style="width:28px; height:1px; background:#2a2a2a;"></span> Skills
+        <span style="color:#3B82F6;">03</span><span style="width:28px; height:1px; background:#2a2a2a;"></span> Skills
       </div>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px;">
@@ -265,13 +265,13 @@
     <!-- SOBRE -->
     <section id="sobre" style="scroll-margin-top:40px; margin-top:150px;">
       <div style="display:flex; align-items:center; gap:14px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:50px;">
-        <span style="color:#7F77DD;">04</span><span style="width:28px; height:1px; background:#2a2a2a;"></span> Sobre
+        <span style="color:#3B82F6;">04</span><span style="width:28px; height:1px; background:#2a2a2a;"></span> Sobre
       </div>
 
       <div class="about-grid" style="display:grid; grid-template-columns:1.3fr 1fr; gap:56px; align-items:start;">
         <div class="about-text">
           <p style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:clamp(20px,2.4vw,26px); line-height:1.45; letter-spacing:-0.01em; margin:0 0 28px;">Sou estudante de Ciência da Computação na UniCarioca e trabalho automatizando os processos operacionais de uma empresa. Meu dia a dia é entender como o trabalho realmente acontece, onde ele trava, e construir as ferramentas que resolvem isso.</p>
-          <p style="font-size:16px; line-height:1.65; color:#9a9a9a; margin:0;">Estou no começo da carreira e aprendo bastante a cada projeto. O que mais me motiva é tirar uma ideia do código e <span style="color:#7F77DD;">colocá-la pra rodar no mundo real.</span></p>
+          <p style="font-size:16px; line-height:1.65; color:#9a9a9a; margin:0;">Estou no começo da carreira e aprendo bastante a cada projeto. O que mais me motiva é tirar uma ideia do código e <span style="color:#3B82F6;">colocá-la pra rodar no mundo real.</span></p>
         </div>
         <div style="position:relative; aspect-ratio:4/5; border-radius:8px; border:1px solid #161616; overflow:hidden; background:#0A0A0A;">
           <img src="images/gabriel.png" alt="Gabriel Silva" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block;" />
@@ -282,19 +282,19 @@
 
     <!-- CONTATO -->
     <section id="contato" style="scroll-margin-top:40px; margin-top:150px; border-top:1px solid #161616; padding-top:80px;">
-      <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#7F77DD; letter-spacing:0.1em; margin-bottom:22px;">Desenvolvedor back-end</div>
+      <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:#3B82F6; letter-spacing:0.1em; margin-bottom:22px;">Desenvolvedor back-end</div>
       <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(48px,9vw,110px); line-height:0.95; letter-spacing:-0.03em; margin:0;">Gabriel Silva</h2>
 
       <p style="font-size:clamp(16px,1.8vw,20px); line-height:1.6; color:#b8b8b8; max-width:560px; margin:34px 0 0;">Tem um projeto em mente ou só quer trocar uma ideia? É só me chamar.</p>
 
       <div style="display:flex; flex-wrap:wrap; align-items:center; gap:24px; margin-top:50px;">
-        <a href="https://www.linkedin.com/in/gabriel-da-silva-040214257/" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#cfcfcf; text-decoration:none; border-bottom:1px solid #2a2a2a; padding-bottom:4px; transition:all .2s;" style-hover="color:#7F77DD; border-color:#7F77DD;">LinkedIn ↗</a>
-        <a href="mailto:dasilva.gabriel2411@gmail.com" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#cfcfcf; text-decoration:none; border-bottom:1px solid #2a2a2a; padding-bottom:4px; transition:all .2s;" style-hover="color:#7F77DD; border-color:#7F77DD;">E-mail ↗</a>
-        <a href="https://github.com/GabrielDss2411" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#cfcfcf; text-decoration:none; border-bottom:1px solid #2a2a2a; padding-bottom:4px; transition:all .2s;" style-hover="color:#7F77DD; border-color:#7F77DD;">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/gabriel-da-silva-040214257/" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#cfcfcf; text-decoration:none; border-bottom:1px solid #2a2a2a; padding-bottom:4px; transition:all .2s;" style-hover="color:#3B82F6; border-color:#3B82F6;">LinkedIn ↗</a>
+        <a href="mailto:dasilva.gabriel2411@gmail.com" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#cfcfcf; text-decoration:none; border-bottom:1px solid #2a2a2a; padding-bottom:4px; transition:all .2s;" style-hover="color:#3B82F6; border-color:#3B82F6;">E-mail ↗</a>
+        <a href="https://github.com/GabrielDss2411" target="_blank" rel="noopener noreferrer" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#cfcfcf; text-decoration:none; border-bottom:1px solid #2a2a2a; padding-bottom:4px; transition:all .2s;" style-hover="color:#3B82F6; border-color:#3B82F6;">GitHub ↗</a>
       </div>
 
       <div style="margin-top:44px;">
-        <a href="https://www.linkedin.com/in/gabriel-da-silva-040214257/" target="_blank" rel="noopener noreferrer" style="display:inline-block; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px; color:#EDEDED; text-decoration:none; border:1px solid #7F77DD; padding:14px 30px; border-radius:999px; transition:all .2s;" style-hover="background:#7F77DD; color:#0A0A0A;">Ver meu LinkedIn</a>
+        <a href="https://www.linkedin.com/in/gabriel-da-silva-040214257/" target="_blank" rel="noopener noreferrer" style="display:inline-block; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px; color:#EDEDED; text-decoration:none; border:1px solid #3B82F6; padding:14px 30px; border-radius:999px; transition:all .2s;" style-hover="background:#3B82F6; color:#0A0A0A;">Ver meu LinkedIn</a>
       </div>
 
       <div style="margin-top:90px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#5a5a5a;">Copyright © 2026 – Gabriel Silva</div>
@@ -305,13 +305,13 @@
   <sc-if value="{{ active }}" hint-placeholder-val="{{ false }}">
     <div class="detail-overlay" style="position:fixed; inset:0; z-index:100; background:#0A0A0A; overflow-y:auto; animation:detailIn .45s cubic-bezier(.16,.84,.44,1);">
       <div style="position:sticky; top:0; z-index:5; display:flex; align-items:center; justify-content:space-between; padding:20px clamp(24px,6vw,72px); background:rgba(10,10,10,0.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid #161616;">
-        <a href="#" onClick="{{ closeDetail }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#cfcfcf; text-decoration:none; transition:color .2s;" style-hover="color:#7F77DD;"><span style="font-size:16px;">←</span> Voltar aos projetos</a>
-        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a;">{{ active.indexStr }} · <span style="color:#7F77DD;">{{ active.year }}</span></div>
+        <a href="#" onClick="{{ closeDetail }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#cfcfcf; text-decoration:none; transition:color .2s;" style-hover="color:#3B82F6;"><span style="font-size:16px;">←</span> Voltar aos projetos</a>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6a6a6a;">{{ active.indexStr }} · <span style="color:#3B82F6;">{{ active.year }}</span></div>
       </div>
 
       <div style="max-width:980px; margin:0 auto; padding:clamp(40px,7vw,88px) clamp(24px,6vw,72px) 120px;">
-        <div style="display:inline-flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#7F77DD; letter-spacing:0.08em; margin-bottom:28px;">
-          <span style="width:9px; height:9px; background:#7F77DD; display:inline-block;"></span> {{ active.role }}
+        <div style="display:inline-flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#3B82F6; letter-spacing:0.08em; margin-bottom:28px;">
+          <span style="width:9px; height:9px; background:#3B82F6; display:inline-block;"></span> {{ active.role }}
         </div>
         <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(40px,6.5vw,74px); line-height:1.0; letter-spacing:-0.025em; margin:0;">{{ active.title }}</h1>
         <p style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:clamp(18px,2.2vw,24px); line-height:1.5; color:#b8b8b8; max-width:680px; margin:30px 0 0;">{{ active.summary }}</p>
@@ -338,7 +338,7 @@
         <div style="display:flex; flex-direction:column; gap:50px; margin-top:64px;">
           <sc-for list="{{ active.sections }}" as="s" hint-placeholder-count="3">
             <div class="detail-section" style="display:grid; grid-template-columns:180px 1fr; gap:28px; align-items:start;">
-              <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#7F77DD; letter-spacing:0.08em; text-transform:uppercase; padding-top:8px;">{{ s.label }}</div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#3B82F6; letter-spacing:0.08em; text-transform:uppercase; padding-top:8px;">{{ s.label }}</div>
               <div>
                 <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(22px,3vw,30px); line-height:1.2; letter-spacing:-0.01em; margin:0 0 14px;">{{ s.heading }}</h3>
                 <p style="font-size:16px; line-height:1.7; color:#9a9a9a; margin:0; max-width:620px;">{{ s.body }}</p>
@@ -352,7 +352,7 @@
         </div>
 
         <div style="margin-top:72px; border-top:1px solid #161616; padding-top:40px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;">
-          <a href="#" onClick="{{ closeDetail }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px; color:#EDEDED; text-decoration:none; border:1px solid #7F77DD; padding:13px 28px; border-radius:999px; transition:all .2s;" style-hover="background:#7F77DD; color:#0A0A0A;"><span>←</span> Voltar aos projetos</a>
+          <a href="#" onClick="{{ closeDetail }}" style="display:inline-flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:15px; color:#EDEDED; text-decoration:none; border:1px solid #3B82F6; padding:13px 28px; border-radius:999px; transition:all .2s;" style-hover="background:#3B82F6; color:#0A0A0A;"><span>←</span> Voltar aos projetos</a>
           <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#5a5a5a;">{{ active.title }} · {{ active.year }}</span>
         </div>
       </div>
